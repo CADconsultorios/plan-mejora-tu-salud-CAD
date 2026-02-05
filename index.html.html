@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAD Consultorios | Plan Mejora tu Salud</title>
+    <!-- Daytoy ti Tailwind CSS para iti disenio -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .cad-blue { color: #00aeef; }
+        .bg-cad-blue { background-color: #00aeef; }
+        .cad-dark { color: #1a1a1a; }
+        .bg-cad-dark { background-color: #1a1a1a; }
+        .border-cad-blue { border-color: #00aeef; }
+        
+        /* Smooth scrolling */
+        html { scroll-behavior: smooth; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900 overflow-x-hidden">
+
+    <!-- Daytoy ti Header ken Navigation -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 py-5">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <div class="flex items-center gap-2">
+                <div class="bg-cad-blue p-1.5 rounded-lg shadow-lg">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="text-white w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+                </div>
+                <span class="font-bold text-xl tracking-tight text-slate-900">
+                    CAD <span class="font-light" style="color: #00aeef;">Consultorios</span>
+                </span>
+            </div>
+            <div class="hidden md:flex gap-8 items-center font-bold text-slate-600">
+                <a href="#proceso" class="hover:text-cyan-500 transition-colors">Flujo</a>
+                <a href="#beneficios" class="hover:text-cyan-500 transition-colors">Servicio</a>
+                <button onclick="toggleModal()" class="bg-cad-blue text-white px-6 py-2.5 rounded-full hover:opacity-90 transition-all shadow-lg">
+                    Agendar consulta
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Daytoy ti Hero Section -->
+    <section class="relative pt-32 pb-20 md:pt-44 md:pb-24 bg-white overflow-hidden">
+        <div class="container mx-auto px-6 text-center">
+            
+            <!-- Daytoy ti Titulo -->
+            <div class="max-w-4xl mx-auto mb-10">
+                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-bold mb-6 tracking-widest uppercase bg-cyan-50 text-cyan-600">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                    Programa "Mejora tu Salud"
+                </div>
+                <h1 class="text-3xl md:text-4xl lg:text-5xl font-black leading-tight mb-4 uppercase tracking-tight text-[#1a1a1a]">
+                    Descubre que está pasando con tu metabolismo y <span class="text-[#00aeef]">evita complicaciones futuras</span>
+                </h1>
+            </div>
+
+            <!-- Daytoy ti Video Section -->
+            <div class="max-w-4xl mx-auto relative mb-16">
+                <div class="relative rounded-[2rem] overflow-hidden shadow-2xl aspect-video bg-slate-900 group cursor-pointer border-8 border-slate-50">
+                    <div class="absolute inset-0 flex items-center justify-center z-20">
+                        <div class="w-16 h-16 md:w-20 md:h-20 bg-cad-blue text-white rounded-full flex items-center justify-center shadow-2xl group-hover:scale-110 transition-transform duration-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 ml-1" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                        </div>
+                    </div>
+                    <div class="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition-all z-10"></div>
+                    <!-- Image of Doctor Radiologo Ivan Garcia -->
+                    <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&q=80&w=1200" alt="Dr. Ivan García Horna" class="w-full h-full object-cover opacity-90">
+                    <div class="absolute bottom-6 left-8 text-white z-20 text-left">
+                        <p class="font-bold text-lg md:text-xl">Dr. Ivan García Horna</p>
+                        <p class="text-white/80 text-sm">Médico Radiólogo - Explicación del Plan</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Daytoy ti "Para ti si..." Section -->
+            <div class="max-w-4xl mx-auto mb-12 text-left bg-slate-50 p-8 md:p-12 rounded-[2.5rem] border border-slate-100 shadow-sm">
+                <h2 class="text-2xl md:text-4xl font-black mb-8 text-center uppercase tracking-tight text-[#1a1a1a]">
+                    Este programa es para ti si...
+                </h2>
+                <div class="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+                    <div class="flex gap-4 items-start">
+                        <div class="mt-1 shrink-0 w-6 h-6 rounded-full flex items-center justify-center bg-cyan-100">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-[#00aeef]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                        <p class="text-slate-700 font-medium leading-tight">Tienes malestares abdominales frecuentes y no sabes por qué.</p>
+                    </div>
+                    <div class="flex gap-4 items-start">
+                        <div class="mt-1 shrink-0 w-6 h-6 rounded-full flex items-center justify-center bg-cyan-100">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-[#00aeef]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                        <p class="text-slate-700 font-medium leading-tight">Te sientes cansad@, inflamad@ o sin energía de forma constante.</p>
+                    </div>
+                    <div class="flex gap-4 items-start">
+                        <div class="mt-1 shrink-0 w-6 h-6 rounded-full flex items-center justify-center bg-cyan-100">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-[#00aeef]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                        <p class="text-slate-700 font-medium leading-tight">Tus hábitos ya te están pasando factura y quieres corregirlos a tiempo.</p>
+                    </div>
+                    <div class="flex gap-4 items-start">
+                        <div class="mt-1 shrink-0 w-6 h-6 rounded-full flex items-center justify-center bg-cyan-100">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-[#00aeef]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                        <p class="text-slate-700 font-medium leading-tight">Has intentado hacer dietas, pero son tan extremas que no logras mantenerlas.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CTA Buttons -->
+            <div class="max-w-3xl mx-auto space-y-8">
+                <button onclick="toggleModal()" class="w-full sm:w-auto bg-cad-blue text-white px-10 py-5 rounded-2xl font-black text-lg hover:opacity-90 transition-all shadow-xl shadow-cyan-100 flex items-center justify-center gap-3 mx-auto uppercase tracking-wide">
+                    Agendar consulta
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </button>
+                <div class="flex flex-wrap justify-center gap-6 text-[10px] md:text-xs text-slate-400 font-black uppercase tracking-[0.2em]">
+                    <span class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-[#00aeef]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Consulta Virtual</span>
+                    <span class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-[#00aeef]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Diagnóstico</span>
+                    <span class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-[#00aeef]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Plan Personalizado</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Daytoy ti "Consiste nuestro servicio" Section -->
+    <section id="beneficios" class="py-24 bg-slate-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl font-black mb-6 uppercase text-[#1a1a1a]">¿En qué consiste nuestro servicio?</h2>
+                <div class="h-1 w-16 mx-auto mb-8 bg-cad-blue"></div>
+                <p class="text-slate-600 text-lg md:text-xl font-medium leading-relaxed">
+                    Obtén una guía médica especializada en medicina preventiva. Identificamos tu estado real de salud y, según tu caso, te solicitamos los exámenes correspondientes. Con esos resultados, te entregamos un diagnóstico claro y fácil de entender, junto con un plan de hábitos personalizado.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Diagnostico -->
+                <div class="p-10 rounded-[2.5rem] bg-white border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-300 group">
+                    <div class="mb-6 bg-slate-50 w-16 h-16 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-[#00aeef]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+                    </div>
+                    <h3 class="text-xl font-black mb-4 uppercase tracking-tight text-[#1a1a1a]">Diagnóstico de precisión</h3>
+                    <p class="text-slate-500 leading-relaxed text-sm font-medium">Analizamos tu composición interna basándonos en estudios específicos para entender tu metabolismo.</p>
+                </div>
+                <!-- Enfoque -->
+                <div class="p-10 rounded-[2.5rem] bg-white border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-300 group">
+                    <div class="mb-6 bg-slate-50 w-16 h-16 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-[#00aeef]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                    </div>
+                    <h3 class="text-xl font-black mb-4 uppercase tracking-tight text-[#1a1a1a]">Enfoque Preventivo</h3>
+                    <p class="text-slate-500 leading-relaxed text-sm font-medium">Detectamos a tiempo lo que puede convertirse en un problema de salud y actuamos sobre lo que hoy ya necesita corrección.</p>
+                </div>
+                <!-- Guia -->
+                <div class="p-10 rounded-[2.5rem] bg-white border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-300 group">
+                    <div class="mb-6 bg-slate-50 w-16 h-16 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-[#00aeef]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/></svg>
+                    </div>
+                    <h3 class="text-xl font-black mb-4 uppercase tracking-tight text-[#1a1a1a]">Guía de hábitos</h3>
+                    <p class="text-slate-500 leading-relaxed text-sm font-medium">No se trata de hacer dieta, sino de aprender a comer y a cuidar tu cuerpo de forma correcta, con hábitos sostenibles.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Daytoy ti "Flujo del Servicio" Section -->
+    <section id="proceso" class="py-24 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+                <div class="max-w-xl text-left">
+                    <h2 class="text-3xl md:text-5xl font-black uppercase leading-none text-[#1a1a1a]">Flujo del <span class="text-[#00aeef]">Servicio</span></h2>
+                    <div class="h-2 w-20 mt-4 bg-cad-blue"></div>
+                </div>
+                <div class="hidden md:block h-px flex-1 bg-slate-100 mx-10 mb-4"></div>
+            </div>
+
+            <div class="grid lg:grid-cols-3 gap-12 text-left">
+                <!-- Paso 1 -->
+                <div class="relative group">
+                    <div class="text-8xl font-black opacity-5 absolute -top-10 -left-4 select-none text-[#1a1a1a]">01</div>
+                    <div class="relative z-10 pt-4">
+                        <h3 class="text-2xl font-black mb-4 uppercase tracking-tight text-[#1a1a1a]">Abordaje Diagnóstico</h3>
+                        <p class="text-slate-600 mb-6 font-medium leading-relaxed">Videollamada para escuchar tu historia clínica y definir los exámenes de laboratorio e imagen necesarios según tu caso.</p>
+                        <div class="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#00aeef]">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Consulta inicial de definición
+                        </div>
+                    </div>
+                </div>
+                <!-- Paso 2 -->
+                <div class="relative group">
+                    <div class="text-8xl font-black opacity-5 absolute -top-10 -left-4 select-none text-[#1a1a1a]">02</div>
+                    <div class="relative z-10 pt-4">
+                        <h3 class="text-2xl font-black mb-4 uppercase tracking-tight text-[#1a1a1a]">Entrega de Resultados</h3>
+                        <p class="text-slate-600 mb-6 font-medium leading-relaxed">Interpretación de tus exámenes, te explicamos sus resultados de forma clara y definimos tu estado de salud actual.</p>
+                        <div class="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#00aeef]">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Interpretación clara y experta
+                        </div>
+                    </div>
+                </div>
+                <!-- Paso 3 -->
+                <div class="relative group">
+                    <div class="text-8xl font-black opacity-5 absolute -top-10 -left-4 select-none text-[#1a1a1a]">03</div>
+                    <div class="relative z-10 pt-4">
+                        <h3 class="text-2xl font-black mb-4 uppercase tracking-tight text-[#1a1a1a]">Plan de acción</h3>
+                        <p class="text-slate-600 mb-6 font-medium leading-relaxed">Entrega de tu guía personalizada con recomendaciones de alimentación, ajustes de hábitos y recursos educativos, más 5 días de seguimiento.</p>
+                        <div class="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#00aeef]">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Guía completa y atención
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Daytoy ti Pricing Section -->
+    <section class="py-24 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="max-w-5xl mx-auto rounded-[3rem] p-8 md:p-16 text-white flex flex-col md:flex-row gap-12 items-center overflow-hidden relative shadow-2xl bg-cad-dark">
+                <div class="absolute top-0 right-0 w-64 h-64 opacity-10 rounded-full translate-x-1/2 -translate-y-1/2 bg-cad-blue"></div>
+                
+                <div class="md:w-3/5 relative z-10 text-left">
+                    <h2 class="text-3xl md:text-4xl font-black mb-8 leading-tight uppercase tracking-tight">
+                        Inversión única para <br/>
+                        <span class="text-[#00aeef]">entender y cuidar tu salud</span>
+                    </h2>
+                    <div class="grid sm:grid-cols-2 gap-y-4 gap-x-8 mb-8 opacity-90 font-bold text-sm">
+                        <div class="flex items-center gap-3"><svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-[#00aeef]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Revisión de historial</div>
+                        <div class="flex items-center gap-3"><svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-[#00aeef]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Indicación de exámenes</div>
+                        <div class="flex items-center gap-3"><svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-[#00aeef]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Sesión de Resultados</div>
+                        <div class="flex items-center gap-3"><svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-[#00aeef]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Plan de Hábitos</div>
+                        <div class="flex items-center gap-3"><svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-[#00aeef]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Recursos Educativos</div>
+                        <div class="flex items-center gap-3"><svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-[#00aeef]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Soporte por 5 días</div>
+                    </div>
+                </div>
+                
+                <div class="md:w-2/5 w-full bg-white/5 backdrop-blur-sm p-10 rounded-[2rem] border border-white/10 text-center relative z-10">
+                    <div class="flex items-center justify-center gap-1 mb-6">
+                        <span class="text-2xl font-bold align-top mt-2">$</span>
+                        <span class="text-8xl font-black text-white">70</span>
+                    </div>
+                    <button onclick="toggleModal()" class="w-full bg-cad-blue text-white py-5 rounded-2xl font-black text-xl hover:opacity-90 transition-all shadow-xl mb-4 uppercase tracking-widest">
+                        Agendar consulta
+                    </button>
+                    <p class="text-white/40 text-[10px] font-bold uppercase tracking-widest italic">No se requiere pago para calificar</p>
+                </div>
+            </div>
+            
+            <div class="mt-12 text-center">
+                <p class="text-slate-500 font-bold text-lg md:text-xl italic">
+                    "Una decisión hoy puede cambiar cómo te sentirás en los próximos años."
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Daytoy ti Footer -->
+    <footer class="py-16 bg-slate-50 border-t border-slate-100">
+        <div class="container mx-auto px-6 text-center">
+            <div class="flex items-center justify-center gap-2 mb-8">
+                <div class="bg-cad-blue p-1.5 rounded-lg">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="text-white w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+                </div>
+                <span class="font-bold text-xl tracking-tight text-[#1a1a1a]">CAD <span class="font-light text-[#00aeef]">Consultorios</span></span>
+            </div>
+            <p class="text-slate-400 text-xs font-bold uppercase tracking-[0.3em]">Dr. Ivan García Horna • Médico Radiólogo</p>
+        </div>
+    </footer>
+
+    <!-- Daytoy ti Modal para ti Quiz -->
+    <div id="quizModal" class="fixed inset-0 z-[100] hidden items-center justify-center px-4">
+        <div class="absolute inset-0 bg-black/80 backdrop-blur-sm" onclick="toggleModal()"></div>
+        <div class="relative bg-white w-full max-w-xl rounded-[2.5rem] shadow-2xl overflow-hidden transition-all transform scale-95 duration-200">
+            <div class="p-8 bg-cad-dark text-white flex justify-between items-center">
+                <div>
+                    <h3 class="text-xl font-black uppercase tracking-tight">Triaje Digital</h3>
+                    <div class="h-1 w-8 mt-1 bg-cad-blue"></div>
+                </div>
+                <button onclick="toggleModal()" class="p-2 hover:bg-white/10 rounded-full transition-colors text-white font-bold">✕</button>
+            </div>
+
+            <div class="p-10" id="quizContent">
+                <!-- Daytoy ti dinamiko a linaon ti quiz ket sadiay JS -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Daytoy ti scroll behavior ti navbar
+        window.addEventListener('scroll', function() {
+            const nav = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                nav.classList.add('bg-white', 'shadow-md', 'py-3');
+                nav.classList.remove('py-5');
+            } else {
+                nav.classList.remove('bg-white', 'shadow-md', 'py-3');
+                nav.classList.add('py-5');
+            }
+        });
+
+        // Daytoy ti lohika ti Quiz
+        const quizQuestions = [
+            {
+                question: "¿Dónde localiza principalmente su malestar o interés de mejora?",
+                options: [
+                    { label: "Abdominal (hinchazón, pesadez, digestión)", value: "metabolic" },
+                    { label: "Articular/Huesos (por un golpe o caída)", value: "trauma" },
+                    { label: "General (cansancio, vitalidad, peso)", value: "metabolic" }
+                ]
+            },
+            {
+                question: "¿Presenta alguno de estos síntomas frecuentemente?",
+                options: [
+                    { label: "Cansancio crónico o niebla mental", value: "metabolic" },
+                    { label: "Dificultad para perder peso", value: "metabolic" },
+                    { label: "Dolor agudo repentino por lesión", value: "trauma" }
+                ]
+            }
+        ];
+
+        let currentStep = 0;
+
+        function toggleModal() {
+            const modal = document.getElementById('quizModal');
+            modal.classList.toggle('hidden');
+            modal.classList.toggle('flex');
+            if (!modal.classList.contains('hidden')) {
+                currentStep = 0;
+                renderStep();
+            }
+        }
+
+        function renderStep() {
+            const content = document.getElementById('quizContent');
+            const step = quizQuestions[currentStep];
+
+            if (currentStep < quizQuestions.length) {
+                content.innerHTML = `
+                    <div class="mb-8">
+                        <div class="flex justify-between text-[10px] font-black text-slate-300 mb-2 uppercase tracking-widest">
+                            <span>Pregunta ${currentStep + 1} de ${quizQuestions.length}</span>
+                        </div>
+                        <div class="w-full h-1 bg-slate-100 rounded-full">
+                            <div class="h-full bg-[#00aeef] transition-all duration-500 rounded-full" style="width: ${((currentStep+1)/quizQuestions.length)*100}%"></div>
+                        </div>
+                    </div>
+                    <h4 class="text-xl md:text-2xl font-black mb-8 leading-tight text-[#1a1a1a]">${step.question}</h4>
+                    <div class="space-y-3">
+                        ${step.options.map((opt, i) => `
+                            <button onclick="handleAnswer('${opt.value}')" class="w-full p-5 text-left border-2 border-slate-100 rounded-2xl hover:bg-slate-50 transition-all group flex justify-between items-center shadow-sm">
+                                <span class="font-bold text-slate-600 group-hover:text-cyan-600">${opt.label}</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-slate-300 group-hover:text-cyan-500 transition-all" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+                            </button>
+                        `).join('')}
+                    </div>
+                `;
+            }
+        }
+
+        function handleAnswer(value) {
+            if (value === 'trauma') {
+                showResult('trauma');
+            } else if (currentStep < quizQuestions.length - 1) {
+                currentStep++;
+                renderStep();
+            } else {
+                showResult('qualified');
+            }
+        }
+
+        function showResult(type) {
+            const content = document.getElementById('quizContent');
+            if (type === 'qualified') {
+                content.innerHTML = `
+                    <div class="text-center py-4">
+                        <div class="w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-8 bg-cyan-50 text-[#00aeef]">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                        <h4 class="text-3xl font-black mb-4 uppercase text-[#1a1a1a]">Has calificado</h4>
+                        <p class="text-slate-500 mb-10 font-medium">Tu caso es ideal para nuestro enfoque metabólico. Agendemos tu consulta vía WhatsApp.</p>
+                        <a href="https://wa.me/your-number" target="_blank" class="block w-full text-white py-5 rounded-2xl font-black text-lg hover:opacity-90 transition-all shadow-xl flex items-center justify-center gap-3 bg-[#25D366]">
+                            AGENDAR POR WHATSAPP
+                        </a>
+                    </div>
+                `;
+            } else {
+                content.innerHTML = `
+                    <div class="text-center py-4">
+                        <div class="w-20 h-20 bg-amber-50 text-amber-500 rounded-full flex items-center justify-center mx-auto mb-8">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                        </div>
+                        <h4 class="text-2xl font-black mb-4 uppercase text-[#1a1a1a]">Evaluación Requerida</h4>
+                        <p class="text-slate-500 mb-10 font-medium">Parece que tu caso requiere una evaluación traumatológica presencial. El plan se enfoca en metabolismo.</p>
+                        <button onclick="toggleModal()" class="w-full py-5 rounded-2xl font-black text-lg bg-[#1a1a1a] text-white">ENTENDIDO</button>
+                    </div>
+                `;
+            }
+        }
+    </script>
+</body>
+</html>
